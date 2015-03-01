@@ -24,6 +24,8 @@ LoadPlugin write_graphite
  <Carbon>
    Host "{{ GRAPHITE_HOST }}"
    Port "{{ GRAPHITE_PORT | default("2003") }}"
+   Protocol "tcp"
+   Prefix "collectd."
    EscapeCharacter "_"
    SeparateInstances true
    StoreRates true
