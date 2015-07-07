@@ -1,4 +1,4 @@
-Hostname "{{ HOST_NAME }}"
+Hostname "{{ HOST_PREFIX }}-{{ HOSTNAME }}"
 
 FQDNLookup false
 Interval 10
