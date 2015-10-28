@@ -17,6 +17,7 @@ LoadPlugin write_graphite
   ReportByDevice true
   ReportReserved true
   ReportInodes true
+  ValuesPercentage true
 </Plugin>
 
 <Plugin "write_graphite">
