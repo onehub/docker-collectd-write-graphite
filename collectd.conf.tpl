@@ -32,4 +32,3 @@ LoadPlugin write_graphite
    AlwaysAppendDS false
  </Carbon>
 </Plugin>
-
