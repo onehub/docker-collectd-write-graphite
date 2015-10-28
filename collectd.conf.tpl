@@ -12,10 +12,9 @@ LoadPlugin memory
 LoadPlugin write_graphite
 
 <Plugin df>
-  Device "hostfs"
-  MountPoint "/.dockerinit"
+  Device "{{ DISK_DEVICE | default("/dev/xvda9") }}"
   IgnoreSelected false
-  ReportByDevice false
+  ReportByDevice true
   ReportReserved true
   ReportInodes true
 </Plugin>
