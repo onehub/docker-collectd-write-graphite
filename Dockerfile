@@ -3,7 +3,7 @@ FROM    ubuntu:14.04
 ENV     DEBIAN_FRONTEND noninteractive
 
 RUN     apt-get -y update
-RUN     apt-get -y install collectd curl python-pip
+RUN     apt-get -y install libprotobuf-c0 collectd curl python-pip
 
 # add a fake mtab for host disk stats
 ADD     etc_mtab /etc/mtab

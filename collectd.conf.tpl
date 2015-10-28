@@ -10,6 +10,7 @@ LoadPlugin df
 LoadPlugin load
 LoadPlugin memory
 LoadPlugin write_graphite
+LoadPlugin write_riemann
 
 <Plugin df>
   Device "{{ DISK_DEVICE | default("/dev/xvda9") }}"
@@ -31,4 +32,16 @@ LoadPlugin write_graphite
    StoreRates true
    AlwaysAppendDS false
  </Carbon>
+</Plugin>
+
+<Plugin "write_riemann">
+  <Node "ops">
+    Host "{{ RIEMANN_HOST }}"
+    Port "{{ RIEMANN_PORT | default("5555") }}"
+    Protocol UDP
+    StoreRates true
+    AlwaysAppendDS false
+    TTLFactor 12
+  </Node>
+  Tag "collectd"
 </Plugin>
