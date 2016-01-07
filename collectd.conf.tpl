@@ -44,4 +44,5 @@ LoadPlugin write_riemann
     TTLFactor 12
   </Node>
   Tag "collectd"
+  Tag "{{ RIEMANN_ENV | default("unknown") }}"
 </Plugin>
